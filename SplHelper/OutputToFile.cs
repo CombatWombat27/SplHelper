@@ -89,7 +89,7 @@ namespace splhelper
 
         private static void PrintInvalid()
         {
-            
+            Facade.invalidSplCheck = true;
             using (var file = new StreamWriter(EnvironmentVariables.UserProfile + @"\desktop\invalidspl.txt", true))
             {
                 file.WriteLine("SPL Could not be created. No valid, unique search values found.");

@@ -61,20 +61,23 @@ namespace splhelper
                     Console.WriteLine(s);
                 }
                 bool rezults = OutputToFile.StringCleaner(xmlLineDone);
-
-                Console.WriteLine("Go ahead and create the spl. When you are done check back here to see if it is created.");
-                System.Threading.Thread.Sleep(10000);
-                Console.WriteLine("Starting the search to confirm proper creation of the SPL");
-                Console.WriteLine("");
-                Console.WriteLine("");
-                while (!File.Exists(macAndAddresses["searchPathAdfString"] + @"\" + Facade.FinalValue + ".Selector.ini"))
+                
+                while (!Facade.invalidSplCheck)
                 {
+                    Console.WriteLine("Go ahead and create the spl. When you are done check back here to see if it is created.");
+                    System.Threading.Thread.Sleep(10000);
+                    Console.WriteLine("Starting the search to confirm proper creation of the SPL");
+                    Console.WriteLine("");
+                    Console.WriteLine("");
+                    while (!File.Exists(macAndAddresses["searchPathAdfString"] + @"\" + Facade.FinalValue + ".Selector.ini"))
+                    {
+                    }
+                    Console.WriteLine("         Spl Created Successfully.");
+                    Console.WriteLine("");
+                    Console.WriteLine("");
+                    Console.WriteLine("");
+                    Console.WriteLine("");
                 }
-                Console.WriteLine("         Spl Created Successfully.");
-                Console.WriteLine("");
-                Console.WriteLine("");
-                Console.WriteLine("");
-                Console.WriteLine("");
           
 
                 
