@@ -72,6 +72,7 @@ namespace splhelper
                     while (!File.Exists(macAndAddresses["searchPathAdfString"] + @"\" + Facade.FinalValue + ".Selector.ini"))
                     {
                     }
+                    Facade.invalidSplCheck = true;
                     Console.WriteLine("         Spl Created Successfully.");
                     Console.WriteLine("");
                     Console.WriteLine("");
